@@ -1,0 +1,353 @@
+body {
+    background-color: black;
+  }
+
+.Titulo {
+    color: white;
+}
+
+.Titulo2 {
+    color: #ffffff;
+}
+
+.texto {
+    color: white;
+}
+
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #000000;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao contêiner do menu */
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necessário para posicionar o dropdown */
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #751111e6; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Sombra mais forte */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Sombra mais forte no texto */
+}
+
+/* Estilo dos cabeçalhos */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+nav ul li .dropdown-content {
+    display: none; /* Oculta o conteúdo do dropdown */
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0 8px 16px rgb(146, 18, 18); /* Sombra ao redor do dropdown */
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+/* Estiliza os itens do dropdown */
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+/* Estiliza os links dentro do dropdown */
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Cor dos links do dropdown */
+    text-decoration: none;
+    display: block;
+}
+
+/* Efeito ao passar o mouse sobre os links do dropdown */
+nav ul li .dropdown-content li a:hover {
+    background-color: #4b0909; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mostra o dropdown ao passar o mouse sobre o item do menu */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo do botão de login */
+.btn-login {
+    background-color: #751111; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+ 
+.btn-login:hover {
+    background-color: #4b0909; /* Cor de fundo do botão ao passar o mouse */
+}
+/* Aplica margens e padding zerados para todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estiliza o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte geral */
+    background-color: #f4f4f4; /* Cor de fundo da página */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estiliza o cabeçalho */
+header {
+    text-align: center; /* Centraliza o texto no cabeçalho */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do cabeçalho */
+}
+
+/* Estiliza o título principal */
+h1 {
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estiliza a seção do produto */
+.produto {
+    display: flex; /* Usa o flexbox para organizar o layout */
+    justify-content: space-around; /* Distribui o espaço entre os elementos */
+    background-color: #fff; /* Cor de fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do elemento */
+}
+
+/* Estiliza a div que contém as imagens do produto */
+.imagens-produto {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
+
+/* Estiliza a imagem principal do produto */
+.imagem-principal {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    max-width: 400px; /* Tamanho máximo da imagem principal */
+}
+
+.miniaturas {
+    display: flex; /* Exibe as miniaturas em linha */
+}
+
+.miniatura {
+    width: 70px; /* Largura das miniaturas */
+    margin-right: 10px; /* Espaçamento entre miniaturas */
+    cursor: pointer; /* Cursor de pointer ao passar sobre as miniaturas */
+}
+
+/* Estilo para esconder todas as imagens exceto a principal */
+#img1:target ~ .imagem-principal {
+    content: url('produto1.jpg'); /* Muda para a imagem 1 */
+}
+
+#img2:target ~ .imagem-principal {
+    content: url('produto2.jpg'); /* Muda para a imagem 2 */
+}
+
+#img3:target ~ .imagem-principal {
+    content: url('produto3.jpg'); /* Muda para a imagem 3 */
+}
+
+#img4:target ~ .imagem-principal {
+    content: url('produto4.jpg'); /* Muda para a imagem 4 */
+}
+
+#img5:target ~ .imagem-principal {
+    content: url('produto5.jpg'); /* Muda para a imagem 5 */
+}
+
+/* Estiliza a div que contém os detalhes do produto */
+.detalhes-produto {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+}
+
+/* Estiliza o nome do produto */
+h2 {
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza a descrição do produto */
+.descricao {
+    color: #555; /* Cor mais clara para a descrição */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estiliza o preço do produto */
+.preco {
+    color: #e74c3c; /* Cor vermelha para o preço */
+    font-size: 24px; /* Tamanho maior para destacar */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estiliza o formulário de opções de compra */
+.opcoes-compra {
+    display: flex; /* Organiza em colunas usando flexbox */
+    flex-direction: column; /* As opções ficam uma abaixo da outra */
+}
+
+/* Estiliza os rótulos (labels) dos selects */
+label {
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito para o texto */
+}
+
+/* Estiliza os campos de seleção (selects) */
+select {
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+/* Estiliza o botão de compra */
+button {
+    padding: 10px; /* Espaçamento interno */
+    background-color: #27ae60; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de pointer ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estiliza o botão ao passar o mouse (hover) */
+button:hover {
+    background-color: #2ecc71; /* Cor verde mais clara */
+}
+
+/* Estiliza a seção de comentários */
+.comentarios {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estiliza cada comentário */
+.comentario {
+    display: flex; /* Exibe a foto e o texto lado a lado */
+    align-items: center; /* Alinha a foto e o texto verticalmente */
+    background-color: #fff; /* Fundo branco */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do comentário */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza a foto do usuário */
+.foto-usuario {
+    width: 50px; /* Largura da foto */
+    height: 50px; /* Altura da foto */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin-right: 15px; /* Espaçamento à direita da foto */
+}
+
+/* Estiliza o texto dos comentários */
+.comentario p {
+    color: #333
+}
+/*footer*/
+/*Estilo geral do footer*/
+footer{
+    background-color: #000000;
+    color:white;
+    padding: 40px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ 
+.footer-section{
+    flex-basis: 23%; /*Faz com que as seções ocupem 23% da largura, com espaço para margens*/
+    margin-bottom: 20px;
+}
+ 
+.footer-section h4{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+ 
+.footer-section p, .footer-section ul{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+ 
+.footer-section ul{
+    list-style-type: none;
+}
+ 
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+ 
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.footer-section ul li a:hover{
+    color: #691c1c;
+}
+ 
+.social-links a{
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.social-links a:hover{
+    color: #691c1c;
+}
+ 
+.footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}
+ 
+.footer-bottom p{
+    margin: 0;
+}
